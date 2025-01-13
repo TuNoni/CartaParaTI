@@ -16,7 +16,7 @@ main{
 .papel{
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
-    font-size: 15px;
+    font-size: 10px;
     overflow: hidden;
     padding:.8rem;
     position: absolute;
