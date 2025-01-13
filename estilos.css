@@ -1,0 +1,115 @@
+body{
+    background-color: #ffdcf1;
+}
+main{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    gap: 3rem;
+}
+.contener-carta{
+    position: relative;
+}
+.papel{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 15px;
+    overflow: hidden;
+    padding:.8rem;
+    position: absolute;
+    background: #fff;
+    z-index: -1;
+    height:100px;
+
+    transition: all 1s;
+}
+.abrir{
+    position: absolute;
+    border-left: 150px solid transparent;
+    border-right:150px solid transparent; 
+    border-top:95px solid #ff8f8f;
+    border-bottom: 95px solid transparent;
+
+    transition: transform .75s ease-in-out;
+    transform-origin: top;
+    
+  }
+.Carta{
+    border-left: 150px solid #f7bfb8;
+    border-right:150px solid #f7bfb8; 
+    border-top:95px solid transparent;
+    border-bottom: 95px solid #cc9a9a;
+}
+.opciones{
+    display: flex;
+    gap: 5rem;   
+}
+button{
+    font-family: comic-sans;
+    color: #ff8f8f;
+    background: #fce3df;
+    border: 1px solid #ff8f8f;
+    width: 100px;
+    cursor: pointer;
+}
+.abrir-carta{
+    transform: rotateX(180deg);
+
+}
+.cerrar-carta{
+    transform: rotateX(0deg);
+
+}
+.abrir-papel{
+    top: -200px;
+    height:300px;
+}
+button:hover{
+    background: #ff8f8f;
+    color: #fce3df;
+}
+@media(max-height:390px){
+    main{
+        padding-top: 200px;
+    }
+}
+.abriendo-papel{
+    animation: OpenPaper .5s forwards;
+}
+@keyframes OpenPaper{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: -120px;
+    }
+}
+.cerrando-papel{
+    animation: closePaper .5s forwards;
+}
+@keyframes closePaper{
+    0%{
+        top: -120px;
+        height: auto;
+    }
+    100%{
+        top: 0;
+    }
+}
+.corazon{
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    margin: auto;
+}
+.p1{
+    position: absolute;
+    left:30px;
+}
+.p2{
+    position: absolute;
+    left: 100px;
+}
